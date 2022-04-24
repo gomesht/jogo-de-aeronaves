@@ -22,9 +22,9 @@ function start() { // Inicio da função start()
 	var perdidos=0;
 	
 	var TECLA = {
-		W: 87,
-		S: 83,
-		D: 68
+		W: 38, //alterado para seta direcional
+		S: 40,
+		D: 68 // D continua D
 		}
 	
 		jogo.pressionou = [];
@@ -472,7 +472,7 @@ function gameOver() {
 	$("#vida").remove();
 	$("#fundoGame").append("<div id='fim'></div>");
 	
-	$("#fim").html("<h1> Game Over </h1><p>Sua pontuação foi: " + pontos + "</p>" + "<div id='reinicia' onClick=reiniciaJogo()><h3>Jogar Novamente</h3></div>");
+	$("#fim").html("<h1> Game Over </h1><p>Sua pontuação foi: " + pontos +" você salvou "+salvos+"aliados."+"</p>" + "<div id='reinicia' onClick=reiniciaJogo()><h3>Jogar Novamente</h3></div>");
 	} // Fim da função gameOver();
 
 
